@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Data Explorer</title>
+  <title>Developing Data Products Project</title>
   <meta charset="utf-8">
-  <meta name="description" content="Data Explorer">
+  <meta name="description" content="Developing Data Products Project">
   <meta name="author" content="Tri Le">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,25 +32,44 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Data Explorer</h1>
-    <h2>Developing Data Products Course Project</h2>
-    <p>Tri Le<br/></p>
+    <h1>Developing Data Products Project</h1>
+    <h2>Johns Hopkins University</h2>
+    <p>Tri Le<br/>Data Scientist</p>
   </hgroup>
   <article></article>  
 </slide>
     
 
+<style>
+em {
+  font-style: italic
+}
+</style>
+<style>
+strong {
+  font-weight: bold;
+}
+</style>
+
+
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Application: Data Explorer</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <p><br></p>
+
+<h4><strong>Introduction</strong></h4>
+
+<ul>
+<li><p>What is this application used for?  </p>
+
+<p><em>This application is used for exploratory data analysis on the ToothGrowth dataset.</em></p></li>
+<li><p>Why do you want to choose this application?  </p>
+
+<p><em>It&#39;s helpful, easy to use, and free.</em></p></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -58,30 +77,59 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 3</h2>
+    <h2>Application: Data Explorer</h2>
   </hgroup>
   <article data-timings="">
-    
+    <ul>
+<li>This application runs the following R code to generate the histogram:</li>
+</ul>
+
+<pre><code class="r">data(ToothGrowth)
+hist(ToothGrowth$len, probability=TRUE, breaks=20, xlab=&#39;tooth length&#39;, col=&#39;lightblue&#39;, 
+     main=&#39;Histogram of Tooth Length&#39;)
+lines(density(ToothGrowth$len, adjust=0.5), col=&quot;red&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Slide 4</h2>
+    <h2>Application: Data Explorer</h2>
   </hgroup>
   <article data-timings="">
-    
+    <ul>
+<li>And the following R code to generate the regression model:</li>
+</ul>
+
+<pre><code class="r">with(ToothGrowth, {plot(len~dose, main=&quot;Regression Plot&quot;, xlab=&quot;dose&quot;, ylab=&quot;tooth length&quot;, 
+                        col=&quot;blue&quot;)
+                   abline(lm(len~dose, data=ToothGrowth), col=&quot;red&quot;) })
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Slide 5</h2>
+    <h2>Application: Data Explorer</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p><br></p>
+
+<ul>
+<li><p>This application has been developed and deployed at:<br>
+<a href="https://wawww.shinyapps.io/shinyapp_proj">https://wawww.shinyapps.io/shinyapp_proj</a>  </p></li>
+<li><p>The source code of this application can be obtained at:<br>
+<a href="https://github.com/wawww/shinyapp_proj">https://github.com/wawww/shinyapp_proj</a></p></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -92,25 +140,25 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Application: Data Explorer'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 3'>
+        data-slide=2 title='Application: Data Explorer'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 4'>
+        data-slide=3 title='Application: Data Explorer'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 5'>
+        data-slide=4 title='Application: Data Explorer'>
          4
       </a>
     </li>

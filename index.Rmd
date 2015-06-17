@@ -1,38 +1,71 @@
 ---
-title       : Data Explorer
-subtitle    : Developing Data Products Course Project
+title       : Developing Data Products Project
+subtitle    : Johns Hopkins University
 author      : Tri Le
-job         : 
+job         : Data Scientist
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
-knit        : slidify::knit2slides
----
-
-
-## Read-And-Delete
-
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
-
---- .class #id 
-
-## Slide 3
+knit        : slidify::knit2slides  
+  
 
 ---
 
-## Slide 4
+## Application: Data Explorer
+
+<br>
+
+#### **Introduction**  
+  
+
+- What is this application used for?  
+
+  *This application is used for exploratory data analysis on the ToothGrowth dataset.*
+
+- Why do you want to choose this application?  
+
+  *It's helpful, easy to use, and free.*
+
+
+--- .class #id
+
+## Application: Data Explorer  
+  
+- This application runs the following R code to generate the histogram:
+
+```{r, fig.width=8, fig.height=4, fig.align='center'}
+data(ToothGrowth)
+hist(ToothGrowth$len, probability=TRUE, breaks=20, xlab='tooth length', col='lightblue', 
+     main='Histogram of Tooth Length')
+lines(density(ToothGrowth$len, adjust=0.5), col="red")
+```         
+
 
 ---
 
-## Slide 5
+## Application: Data Explorer  
+  
+- And the following R code to generate the regression model:
+
+```{r, fig.width=8, fig.height=4, fig.align='center'}
+with(ToothGrowth, {plot(len~dose, main="Regression Plot", xlab="dose", ylab="tooth length", 
+                        col="blue")
+                   abline(lm(len~dose, data=ToothGrowth), col="red") })
+```         
 
 
+---
 
+## Application: Data Explorer
 
+<br>
 
+- This application has been developed and deployed at:  
+[https://wawww.shinyapps.io/shinyapp_proj](https://wawww.shinyapps.io/shinyapp_proj)  
+  
+- The source code of this application can be obtained at:  
+[https://github.com/wawww/shinyapp_proj](https://github.com/wawww/shinyapp_proj)
 
 
